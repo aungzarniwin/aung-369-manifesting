@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>369 Manifestation Journal</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        mystic: {
+                            50: '#f5f3ff',
+                            100: '#ede9fe',
+                            200: '#ddd6fe',
+                            300: '#c4b5fd',
+                            400: '#a78bfa',
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                            700: '#6d28d9',
+                            800: '#5b21b6',
+                            900: '#2e1065',
+                            950: '#0f051d'
+                        },
+                        amberGold: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Cinzel', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: linear-gradient(135deg, #0f051d 0%, #1e1135 50%, #0f051d 100%);
+            min-height: 100vh;
+        }
+        .title-font {
+            font-family: 'Cinzel', serif;
+        }
+        .glass-card {
+            background: rgba(30, 17, 53, 0.65);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(167, 139, 250, 0.15);
+        }
+        .glass-input {
+            background: rgba(15, 5, 29, 0.6);
+            border: 1px solid rgba(167, 139, 250, 0.2);
+            transition: all 0.3s ease;
+        }
+        .glass-input:focus {
+            border-color: rgba(245, 158, 11, 0.6);
+            box-shadow: 0 0 15px rgba(245, 158, 11, 0.2);
+            outline: none;
+        }
+        /* Glowing effects */
+        .gold-glow {
+            box-shadow: 0 0 25px rgba(245, 158, 11, 0.25);
+        }
+        .purple-glow {
+            box-shadow: 0 0 25px rgba(139, 92, 246, 0.25);
+        }
+    </style>
+</head>
+<body class="text-slate-100 flex flex-col min-h-screen">
+
+    <!-- Header Navigation -->
+    <header class="w-full glass-card sticky top-0 z-50 border-b border-mystic-500/20">
+        <div class="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-mystic-600 to-amberGold-500 flex items-center justify-center shadow-lg">
+                    <i class="fa-solid font-bold text-slate-950 text-xl">369</i>
+                </div>
+                <div>
+                    <h1 class="title-font font-bold text-lg tracking-wider text-amberGold-400">369 MANIFESTATION</h1>
+                    <p class="text-xs text-mystic-300">စက္ကဝါ၏ ၃၆၉ စွမ်းအင်နည်းလမ်း</p>
+                </div>
+            </div>
+
+            <!-- Header Controls & Streaks -->
+            <div class="flex items-center gap-4">
+                <!-- Streak Badge -->
+                <div class="flex items-center gap-2 bg-gradient-to-r from-amberGold-500/20 to-amberGold-600/10 border border-amberGold-500/30 px-3 py-1.5 rounded-full text-amberGold-400 gold-glow">
+                    <i class="fa-solid fa-fire text-amberGold-500 text-lg animate-pulse"></i>
+                    <span id="streakCount" class="font-bold text-lg">0</span>
+                    <span class="text-xs font-semibold uppercase tracking-wider hidden sm:inline">ရက်ဆက် Streak</span>
+                </div>
+                <!-- GitHub Deployment Guide Button -->
+                <button onclick="toggleModal('deployModal')" class="p-2.5 rounded-full bg-mystic-800/50 hover:bg-mystic-700/50 text-mystic-300 hover:text-white transition border border-mystic-500/20" title="GitHub Pages တွင် လွှင့်နည်း">
+                    <i class="fa-brands fa-github text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-5xl mx-auto px-4 py-8 flex-1 w-full space-y-8">
+        
+        <!-- Hero Preset Intention Setup Banner -->
+        <section class="glass-card rounded-2xl p-6 md:p-8 text-center relative overflow-hidden">
+            <div class="absolute -right-16 -top-16 w-48 h-48 bg-mystic-600/10 rounded-full blur-3xl"></div>
+            <div class="absolute -left-16 -bottom-16 w-48 h-48 bg-amberGold-500/10 rounded-full blur-3xl"></div>
+            
+            <span class="text-amberGold-400 title-font text-xs tracking-widest uppercase mb-2 block font-semibold">၃-၆-၉ ရည်မှန်းချက် စာသားများ</span>
+            <h2 class="text-2xl md:text-3xl title-font font-bold text-white mb-2">နေ့စဉ် စာသားများ ပြင်ဆင်ရန်</h2>
+            <p class="text-xs text-mystic-300 mb-6">မနက်၊ နေ့လယ် နှင့် ည အလိုက် လိုချင်သော စာသားများကို သီးခြားစီ ထည့်သွင်း သို့မဟုတ် ပြင်ဆင်နိုင်ပါသည်။</p>
+            
+            <!-- Quick Preset Action Button -->
+            <div class="flex justify-center gap-3">
+                <button onclick="applyTargetPreset()" class="bg-gradient-to-r from-mystic-600 to-amberGold-600 hover:from-mystic-500 hover:to-amberGold-500 text-white text-sm font-medium px-6 py-3 rounded-xl transition flex items-center gap-2 shadow-lg shadow-mystic-900/50 border border-mystic-400/30">
+                    <i class="fa-solid fa-wand-magic-sparkles text-amberGold-300"></i> "ဝင်ငွေ သိန်း ၅၀" စာသား အလိုအလျောက် ဖြည့်မည်
+                </button>
+            </div>
+        </section>
+
+        <!-- Daily Progress Section -->
+        <section class="glass-card rounded-2xl p-6 md:p-8 space-y-4">
+            <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-2">
+                <div>
+                    <h3 class="title-font font-semibold text-lg text-mystic-200">ယနေ့ ရလဒ် ပြီးမြောက်မှု</h3>
+                    <p id="currentDateDisplay" class="text-xs text-mystic-400"></p>
+                </div>
+                <div class="text-right">
+                    <span id="progressPercent" class="title-font font-bold text-2xl text-amberGold-400">0%</span>
+                </div>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="w-full h-3 bg-mystic-950 rounded-full overflow-hidden p-0.5 border border-mystic-500/20">
+                <div id="progressBar" class="h-full bg-gradient-to-r from-mystic-500 via-amberGold-500 to-amberGold-400 rounded-full transition-all duration-500 w-0"></div>
+            </div>
+
+            <div class="grid grid-cols-3 text-center text-xs text-mystic-300 pt-1 font-medium">
+                <div id="morningStep" class="opacity-50"><i class="fa-solid fa-sun text-amberGold-400 mr-1"></i> မနက် (၃ ကြိမ်)</div>
+                <div id="afternoonStep" class="opacity-50"><i class="fa-solid fa-cloud-sun text-amberGold-400 mr-1"></i> နေ့လယ် (၆ ကြိမ်)</div>
+                <div id="eveningStep" class="opacity-50"><i class="fa-solid fa-moon text-amberGold-400 mr-1"></i> ည (၉ ကြိမ်)</div>
+            </div>
+        </section>
+
+        <!-- 3-6-9 Interactive Cards Section -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <!-- Morning 3 Times -->
+            <div class="glass-card rounded-2xl p-6 flex flex-col justify-between space-y-4 relative overflow-hidden border-t-4 border-amberGold-500">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="bg-amberGold-500/10 text-amberGold-400 text-xs px-3 py-1 rounded-full font-semibold border border-amberGold-500/20">မနက်ခင်း</span>
+                        <span class="text-amberGold-400 font-serif font-bold text-xl">3×</span>
+                    </div>
+                    <h4 class="title-font text-lg font-semibold text-white mb-1">အာရုံစိုက်ခြင်း (၃ ကြိမ်)</h4>
+                    <p class="text-xs text-mystic-300 mb-4">နိုးနိုးချင်း မနက်ပိုင်းတွင် ရေးသားရန်</p>
+                    
+                    <div id="morningContainer" class="space-y-3">
+                        <!-- Inputs populated dynamically -->
+                    </div>
+                </div>
+
+                <button onclick="fillSectionWithPreset('morning')" id="morningBtn" class="w-full mt-4 py-2.5 rounded-xl bg-mystic-800/80 hover:bg-mystic-700/80 text-mystic-200 font-medium text-sm border border-mystic-500/30 transition flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-pen text-amberGold-400"></i> မနက်ခင်း စာသား ဖြည့်မည်/ဖျက်မည်
+                </button>
+            </div>
+
+            <!-- Afternoon 6 Times -->
+            <div class="glass-card rounded-2xl p-6 flex flex-col justify-between space-y-4 relative overflow-hidden border-t-4 border-mystic-400">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="bg-mystic-400/10 text-mystic-300 text-xs px-3 py-1 rounded-full font-semibold border border-mystic-400/20">နေ့လယ်ခင်း</span>
+                        <span class="text-mystic-300 font-serif font-bold text-xl">6×</span>
+                    </div>
+                    <h4 class="title-font text-lg font-semibold text-white mb-1">စွမ်းအင်မြှင့်တင်ခြင်း (၆ ကြိမ်)</h4>
+                    <p class="text-xs text-mystic-300 mb-4">နေ့လယ်ပိုင်းတွင် ရေးသားရန်</p>
+                    
+                    <div id="afternoonContainer" class="space-y-3">
+                        <!-- Inputs populated dynamically -->
+                    </div>
+                </div>
+
+                <button onclick="fillSectionWithPreset('afternoon')" id="afternoonBtn" class="w-full mt-4 py-2.5 rounded-xl bg-mystic-800/80 hover:bg-mystic-700/80 text-mystic-200 font-medium text-sm border border-mystic-500/30 transition flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-pen text-amberGold-400"></i> နေ့လယ်ခင်း စာသား ဖြည့်မည်/ဖျက်မည်
+                </button>
+            </div>
+
+            <!-- Evening 9 Times -->
+            <div class="glass-card rounded-2xl p-6 flex flex-col justify-between space-y-4 relative overflow-hidden border-t-4 border-mystic-600">
+                <div>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="bg-mystic-600/20 text-mystic-300 text-xs px-3 py-1 rounded-full font-semibold border border-mystic-600/30">ညနေ/ညဉ့်</span>
+                        <span class="text-mystic-300 font-serif font-bold text-xl">9×</span>
+                    </div>
+                    <h4 class="title-font text-lg font-semibold text-white mb-1">စိတ်ထဲကိန်းအောင်းစေခြင်း (၉ ကြိမ်)</h4>
+                    <p class="text-xs text-mystic-300 mb-4">မအိပ်မီ ညပိုင်းတွင် ရေးသားရန်</p>
+                    
+                    <div id="eveningContainer" class="space-y-3 max-h-[380px] overflow-y-auto pr-1">
+                        <!-- Inputs populated dynamically -->
+                    </div>
+                </div>
+
+                <button onclick="fillSectionWithPreset('evening')" id="eveningBtn" class="w-full mt-4 py-2.5 rounded-xl bg-mystic-800/80 hover:bg-mystic-700/80 text-mystic-200 font-medium text-sm border border-mystic-500/30 transition flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-pen text-amberGold-400"></i> ညပိုင်း စာသား ဖြည့်မည်/ဖျက်မည်
+                </button>
+            </div>
+
+        </div>
+
+        <!-- History & Reflection Section -->
+        <section class="glass-card rounded-2xl p-6 md:p-8 space-y-6">
+            <div class="flex justify-between items-center">
+                <h3 class="title-font text-xl font-bold text-white flex items-center gap-2">
+                    <i class="fa-solid fa-book-bookmark text-amberGold-400"></i> Manifestation မှတ်တမ်းများ
+                </h3>
+                <button onclick="clearHistory()" class="text-xs text-rose-400 hover:text-rose-300 transition">မှတ်တမ်းများ ရှင်းလင်းမည်</button>
+            </div>
+
+            <div id="historyList" class="space-y-4 max-h-80 overflow-y-auto pr-2">
+                <!-- Log History Populates Here -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full py-6 text-center text-xs text-mystic-400 border-t border-mystic-500/10 mt-12">
+        <p>"၃၊ ၆၊ ၉ တို့၏ ကြီးမြတ်ပုံကို သိရှိပါက စက္ကဝါ၏ သော့ချက်ကို ရရှိပါလိမ့်မည်။" — နီကိုလာ တက်စလာ</p>
+    </footer>
+
+    <!-- GitHub Deployment Modal -->
+    <div id="deployModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md hidden flex items-center justify-center z-50 p-4">
+        <div class="glass-card rounded-2xl max-w-lg w-full p-6 space-y-4 border border-amberGold-500/30">
+            <div class="flex justify-between items-center border-b border-mystic-500/20 pb-3">
+                <h3 class="title-font font-bold text-lg text-amberGold-400 flex items-center gap-2">
+                    <i class="fa-brands fa-github"></i> GitHub Pages တွင် အခမဲ့ လွှင့်နည်း
+                </h3>
+                <button onclick="toggleModal('deployModal')" class="text-mystic-400 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
+            </div>
+            
+            <ol class="list-decimal list-inside space-y-2.5 text-sm text-mystic-200">
+                <li>GitHub တွင် <code class="bg-mystic-950 px-2 py-0.5 rounded text-amberGold-300">369-manifestation</code> အမည်ဖြင့် repository အသစ်ဆောက်ပါ။</li>
+                <li>ထို repo ထဲတွင် <code class="bg-mystic-950 px-2 py-0.5 rounded text-amberGold-300">index.html</code> ဖိုင်တစ်ခု ဆောက်ပါ။</li>
+                <li>ဤ HTML Code များကို index.html ထဲသို့ ကူးထည့်ပါ။</li>
+                <li>Commit changes နှိပ်ပါ။</li>
+                <li><strong>Settings</strong> &rarr; <strong>Pages</strong> သို့သွားပါ။</li>
+                <li>Branch နေရာတွင် <strong>main</strong> ကိုရွေးပြီး <strong>Save</strong> နှိပ်ပါ။</li>
+                <li>၁ မိနစ်အတွင်း သင့် Website လွှင့်ပြီး ဖြစ်ပါလိမ့်မည်။</li>
+            </ol>
+
+            <div class="pt-4 flex justify-end">
+                <button onclick="toggleModal('deployModal')" class="px-5 py-2 rounded-xl bg-amberGold-500 hover:bg-amberGold-600 text-slate-950 font-bold text-sm transition">နားလည်ပါပြီ</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Application JavaScript Logic -->
+    <script>
+        const STORAGE_KEY = 'manifestation_369_data_v2';
+
+        const PRESETS = {
+            morning: "တလကိုဝင်ငွေသိန်း၅၀လိုချင်တယ်",
+            afternoon: "တလကိုဝင်ငွေသိန်း၅၀ရရှိနေပြီ",
+            evening: "တလကိုဝင်ငွေသိန်း၅၀ရရှိနေလို့ universe ကိုကျေးဇူးတင်ပါတယ်"
+        };
+
+        let appData = {
+            mainIntention: '',
+            streakCount: 0,
+            lastCompletedDate: null,
+            entries: {}
+        };
+
+        function getTodayString() {
+            const date = new Date();
+            return date.toISOString().split('T')[0];
+        }
+
+        function initApp() {
+            loadFromStorage();
+            updateDateDisplay();
+            renderInputs();
+            calculateProgress();
+            renderHistory();
+        }
+
+        function loadFromStorage() {
+            const saved = localStorage.getItem(STORAGE_KEY);
+            if (saved) {
+                try {
+                    appData = JSON.parse(saved);
+                } catch (e) {
+                    console.error("Storage error", e);
+                }
+            }
+
+            const today = getTodayString();
+            if (!appData.entries[today]) {
+                appData.entries[today] = {
+                    morning: Array(3).fill(''),
+                    afternoon: Array(6).fill(''),
+                    evening: Array(9).fill(''),
+                    completed: false
+                };
+            }
+
+            checkStreakValidity();
+        }
+
+        function saveToStorage() {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(appData));
+        }
+
+        function checkStreakValidity() {
+            if (!appData.lastCompletedDate) return;
+
+            const today = new Date(getTodayString());
+            const lastDate = new Date(appData.lastCompletedDate);
+            const diffDays = Math.round((today - lastDate) / (1000 * 60 * 60 * 24));
+
+            if (diffDays > 1 && appData.lastCompletedDate !== getTodayString()) {
+                appData.streakCount = 0;
+                saveToStorage();
+            }
+        }
+
+        function updateDateDisplay() {
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            document.getElementById('currentDateDisplay').textContent = new Date().toLocaleDateString('my-MM', options);
+        }
+
+        function applyTargetPreset() {
+            const today = getTodayString();
+            appData.entries[today].morning = Array(3).fill(PRESETS.morning);
+            appData.entries[today].afternoon = Array(6).fill(PRESETS.afternoon);
+            appData.entries[today].evening = Array(9).fill(PRESETS.evening);
+
+            saveToStorage();
+            renderInputs();
+            calculateProgress();
+        }
+
+        function renderInputs() {
+            const today = getTodayString();
+            const todayData = appData.entries[today];
+
+            renderSectionInputs('morningContainer', 3, 'morning', todayData.morning, PRESETS.morning);
+            renderSectionInputs('afternoonContainer', 6, 'afternoon', todayData.afternoon, PRESETS.afternoon);
+            renderSectionInputs('eveningContainer', 9, 'evening', todayData.evening, PRESETS.evening);
+        }
+
+        function renderSectionInputs(containerId, count, section, values, defaultPlaceholder) {
+            const container = document.getElementById(containerId);
+            container.innerHTML = '';
+
+            // Ensure checked state array exists for this section if not present
+            if (!appData.entries[getTodayString()][section + '_checks']) {
+                appData.entries[getTodayString()][section + '_checks'] = Array(count).fill(false);
+            }
+            const checks = appData.entries[getTodayString()][section + '_checks'];
+
+            for (let i = 0; i < count; i++) {
+                const val = values[i] || '';
+                const isChecked = checks[i] || false;
+                
+                const wrapper = document.createElement('div');
+                wrapper.className = 'flex items-center gap-2.5';
+
+                // Checkbox for each individual slot
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.checked = isChecked;
+                checkbox.className = 'w-4 h-4 rounded accent-amberGold-500 cursor-pointer';
+
+                const input = document.createElement('input');
+                input.type = 'text';
+                input.className = `w-full glass-input text-sm px-3.5 py-2 rounded-lg text-mystic-100 placeholder-mystic-500/50 transition-all ${isChecked ? 'line-through opacity-60 border-emerald-500/30' : ''}`;
+                input.value = val;
+                input.placeholder = `#${i + 1} ${defaultPlaceholder}`;
+
+                // Handle check toggle
+                checkbox.addEventListener('change', (e) => {
+                    appData.entries[getTodayString()][section + '_checks'][i] = e.target.checked;
+                    saveToStorage();
+                    renderInputs(); // re-render to update styling immediately
+                    calculateProgress();
+                });
+
+                // Handle text input edit
+                input.addEventListener('input', (e) => {
+                    appData.entries[getTodayString()][section][i] = e.target.value;
+                    saveToStorage();
+                    calculateProgress();
+                });
+
+                wrapper.appendChild(checkbox);
+                wrapper.appendChild(input);
+                container.appendChild(wrapper);
+            }
+        }
+
+        function fillSectionWithPreset(section) {
+            const today = getTodayString();
+            const count = section === 'morning' ? 3 : section === 'afternoon' ? 6 : 9;
+            const presetText = PRESETS[section];
+            
+            const isFull = appData.entries[today][section].every(v => v.trim() !== '');
+
+            if (isFull) {
+                appData.entries[today][section] = Array(count).fill('');
+                appData.entries[today][section + '_checks'] = Array(count).fill(false);
+            } else {
+                appData.entries[today][section] = Array(count).fill(presetText);
+                appData.entries[today][section + '_checks'] = Array(count).fill(true); // automatically check them off when auto-filled
+            }
+
+            saveToStorage();
+            renderInputs();
+            calculateProgress();
+        }
+
+        function calculateProgress() {
+            const today = getTodayString();
+            const todayData = appData.entries[today];
+
+            let checkedCount = 0;
+            const totalCount = 18;
+
+            ['morning', 'afternoon', 'evening'].forEach(sec => {
+                const checks = todayData[sec + '_checks'] || Array(sec === 'morning' ? 3 : sec === 'afternoon' ? 6 : 9).fill(false);
+                checks.forEach(isChecked => {
+                    if (isChecked) checkedCount++;
+                });
+            });
+
+            const percentage = Math.round((checkedCount / totalCount) * 100);
+
+            document.getElementById('progressBar').style.width = percentage + '%';
+            document.getElementById('progressPercent').textContent = percentage + '%';
+
+            const morningDone = (todayData.morning_checks || []).every(Boolean) && todayData.morning.every(v => v.trim().length > 0);
+            const afternoonDone = (todayData.afternoon_checks || []).every(Boolean) && todayData.afternoon.every(v => v.trim().length > 0);
+            const eveningDone = (todayData.evening_checks || []).every(Boolean) && todayData.evening.every(v => v.trim().length > 0);
+
+            document.getElementById('morningStep').className = morningDone ? 'text-amberGold-400 font-bold opacity-100' : 'opacity-50';
+            document.getElementById('afternoonStep').className = afternoonDone ? 'text-amberGold-400 font-bold opacity-100' : 'opacity-50';
+            document.getElementById('eveningStep').className = eveningDone ? 'text-amberGold-400 font-bold opacity-100' : 'opacity-50';
+
+            // Daily Completion & Streak Increment
+            if (percentage === 100 && !todayData.completed) {
+                todayData.completed = true;
+                if (appData.lastCompletedDate !== today) {
+                    appData.streakCount = (appData.streakCount || 0) + 1;
+                    appData.lastCompletedDate = today;
+                }
+                saveToStorage();
+                renderHistory();
+            } else if (percentage < 100 && todayData.completed) {
+                // If unchecked later in the day
+                todayData.completed = false;
+                saveToStorage();
+            }
+
+            document.getElementById('streakCount').textContent = appData.streakCount || 0;
+        }
+
+        function renderHistory() {
+            const historyList = document.getElementById('historyList');
+            const entries = appData.entries;
+            const dates = Object.keys(entries).sort().reverse();
+
+            if (dates.length === 0) {
+                historyList.innerHTML = `<p class="text-sm text-mystic-400 italic text-center py-4">မှတ်တမ်းများ မရှိသေးပါ။ ယနေ့ စတင်ရေးသားလိုက်ပါ!</p>`;
+                return;
+            }
+
+            historyList.innerHTML = '';
+
+            dates.forEach(dateStr => {
+                const day = entries[dateStr];
+                const totalFilled = [...day.morning, ...day.afternoon, ...day.evening].filter(v => v.trim().length > 0).length;
+                const percent = Math.round((totalFilled / 18) * 100);
+
+                const item = document.createElement('div');
+                item.className = 'glass-input rounded-xl p-4 flex flex-col md:flex-row justify-between md:items-center gap-3 border border-mystic-500/20';
+
+                item.innerHTML = `
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <span class="font-bold text-sm text-amberGold-400">${dateStr}</span>
+                            ${day.completed ? '<span class="bg-emerald-500/20 text-emerald-300 text-xs px-2 py-0.5 rounded-full border border-emerald-500/30">ပြီးမြောက်သည်</span>' : '<span class="bg-amber-500/20 text-amber-300 text-xs px-2 py-0.5 rounded-full border border-amber-500/30">လုပ်ဆောင်ဆဲ</span>'}
+                        </div>
+                        <p class="text-xs text-mystic-300 mt-1 italic">${day.morning[0] || 'မှတ်တမ်းမရှိပါ'}</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-xs text-mystic-400 font-medium">${totalFilled}/18 ကြိမ်</span>
+                        <span class="title-font font-bold text-mystic-200 text-sm">${percent}%</span>
+                    </div>
+                `;
+
+                historyList.appendChild(item);
+            });
+        }
+
+        function clearHistory() {
+            if (confirm("မှတ်တမ်းနှင့် Streak အချက်အလက်များကို ဖျက်ရန် သေချာပါသလား။")) {
+                localStorage.removeItem(STORAGE_KEY);
+                appData = {
+                    mainIntention: '',
+                    streakCount: 0,
+                    lastCompletedDate: null,
+                    entries: {}
+                };
+                initApp();
+            }
+        }
+
+        function toggleModal(modalId) {
+            document.getElementById(modalId).classList.toggle('hidden');
+        }
+
+        window.onload = initApp;
+    </script>
+</body>
+</html>
